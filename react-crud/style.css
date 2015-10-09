@@ -1,0 +1,43 @@
+* {
+  font-family: 'Segoe UI'
+}
+
+.list {
+  margin-top: 10px;
+}
+
+.item {
+  background-color: whitesmoke;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.item-order {
+  font-weight: bold;
+  color: #ccc;
+  margin-right: 5px;
+}
+
+.item-text {
+  margin-right: 5px;
+}
+
+.selected .item-order {
+  color: #78c;
+}
+
+.selected .item-text {
+  font-style: italic;
+  font-weight: bold;
+  color: #09D;
+}
+
+.item a {
+  margin-right: 5px;
+  color: #78c;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
