@@ -1,25 +1,26 @@
 'use strict';
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 
 var Form = require('./components/Form.jsx');
 var List = require('./components/List.jsx');
 
 var App = React.createClass({
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       list: [],
       selected: null
     };
   },
 
-  saveItem: function (item) {
-    if (!item.text) return;
+  saveItem: function (text) {
+    if (!text) return;
 
     var list = this.state.list;
-    if (item.index != null) list[item.index] = item.text;
-    else list.push(item.text);
+    if (this.state.selected) list[this.state.selected.index] = text;
+    else list.push(text);
     this.setState({ list: list });
     this.clearSelection();
   },
@@ -68,4 +69,4 @@ var App = React.createClass({
 
 });
 
-React.render(<App />, document.getElementById('app-container'));
+ReactDOM.render(<App />, document.getElementById('app-container'));
